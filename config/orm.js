@@ -27,5 +27,14 @@ var orm = {
     // updateOne()
     updateOne: function(id, callback)
     {
-        
+        connection.query("UPDATE burgers SET ? WHERE ?", [{devoured: true}, {id: id}],
+        function(err, result)
+        {
+            if (err) throw err;
+            callback(result);
+        });
     }
+};
+
+// Export the ORM object in module.exports
+module.exports = orm;
