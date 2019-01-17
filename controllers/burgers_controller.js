@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
 // Index/Main Burgers Page
 router.get("/burgers", function (req,res)
 {
-    burgers.selectAll(function (data)
+    burger.selectAll(function (data)
     {
         var hbsObject = {
             burgers: data
