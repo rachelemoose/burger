@@ -20,11 +20,12 @@
     {{/each}}
 </ul>
 
+{{!-- Insert New Burger Form --}}
 <h2>Add a Burger</h2>
-<form class="create-form">
+<form action="burger/create" method="POST">
     <div class="form-group">
         <label>Burger Name</label>
         <input type="text" name="name">
     </div>
-    <button type="submit">Add Your Burger</button>
+    <button type="submit">Make My Burger, Please!</button>
 </form>
