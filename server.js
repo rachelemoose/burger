@@ -27,8 +27,8 @@ app.set("view engine", "handlebars");
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-var routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
+var router = require('./controllers/burgers_controller.js');
+app.use('/', router);
 
 
 // LISTENER

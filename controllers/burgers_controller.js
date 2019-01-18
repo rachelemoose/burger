@@ -8,11 +8,11 @@ var router = express.Router();
 
 // Create routes for pages - no specification with route to main burgers page
 router.get("/", function(req, res) {
-    res.redirect("/burgers");
+    res.redirect("/index");
 });
 
 // Index/Main Burgers Page
-router.get("/burgers", function (req,res)
+router.get("/index", function (req,res)
 {
     burger.selectAll(function (data)
     {
@@ -29,7 +29,7 @@ router.post("/burger/create", function (req,res)
 {
     burger.insertOne(req.body.burger_name, function()
     {
-        res.redirect("/burgers");
+        res.redirect("/index");
     });
 });
 
@@ -38,7 +38,7 @@ router.post("/burger/eat/:id", function(req, res)
 {
     burger.updateOne(req.params.id, function()
     {
-        res.redirect("/burgers");
+        res.redirect("/index");
     });
 });
 
