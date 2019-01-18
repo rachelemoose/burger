@@ -21,12 +21,13 @@
 <ul>
     {{#each burgers}}
     {{#if this.devoured}}
+    <li>{{burger_name}}</li>
     {{/if}}
     {{/each}}
 </ul>
 
 {{!-- Insert New Burger Form --}}
-<h2>Add a Burger</h2>
+<h2>Order a Burger</h2>
 <form action="burger/create" method="POST">
     <div class="form-group">
         <label>Burger Name</label>
