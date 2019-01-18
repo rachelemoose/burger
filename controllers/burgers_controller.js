@@ -27,7 +27,7 @@ router.get("/index", function (req,res)
 // Create a new burger page which redirects to home page when done
 router.post("/burger/create", function (req,res)
 {
-    burger.insertOne(req.body.burger_name, function()
+    burger.insertOne(req.body.name, function()
     {
         res.redirect("/index");
     });
