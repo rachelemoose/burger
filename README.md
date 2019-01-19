@@ -14,8 +14,22 @@ If you'd like a new Burger made, type the name next to "Burger Name" and click "
 # Technologies Used 
 - `MySQL`
 - `Node`
-- `Express`
-- `Handlebars`
+  - `Express`
+  - `Handlebars`
 - `HTML`
 - `JavaScript`
 - `CSS`
+
+# Install Locally 
+In your terminal 
+<br>
+`git clone https://github.com/rachelemoose/burger.git`
+<br>
+`cd burger`
+<br>
+`npm install`
+
+# Command 
+`node server.js`
+<br>
+If installed sucessfull, you will receive a response with the localhost link. Copy and paste this link into your browser.
