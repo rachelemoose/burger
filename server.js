@@ -3,10 +3,8 @@
 
 var express = require("express");
 
-// ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
-// ==============================================================================
 
 // Tells node that we are creating an "express" server
 var app = express();
@@ -17,6 +15,8 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Use middleware function to serve files such as images, CSS files, and JavaScript files in public folder
+app.use(express.static(__dirname + "/public"));
 
 // Set Handlebars
 var exphbs = require("express-handlebars");
